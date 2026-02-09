@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Just in Case You Forget 🫶</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body class="page reminders">
+  <div class="floating-layer">
+    <span class="float-heart">💗</span>
+    <span class="float-heart">💖</span>
+    <span class="float-star">✨</span>
+    <span class="float-star">⭐</span>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">For You</a>
+      <div class="nav-links">
+        <a href="story.html">Our Story ✨</a>
+        <a href="reasons.html">Reasons I Love You ❤️</a>
+        <a href="reminders.html">Daily Reminders 🫶</a>
+        <a href="letter.html">Birthday Letter 💌</a>
+        <a href="surprise.html">Surprise 🎁</a>
+      </div>
+      <button class="audio-toggle" type="button" aria-pressed="false">
+        🔈 Music
+      </button>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="page-title">
+      <h1>Just in Case You Forget 🫶</h1>
+      <p>Little reminders for the days you need extra love.</p>
+    </section>
+
+    <section class="reminder-list">
+      <div class="reminder-card">You are deeply loved.</div>
+      <div class="reminder-card">I’m always rooting for you.</div>
+      <div class="reminder-card">No matter what, you have me.</div>
+      <div class="reminder-card">You deserve soft mornings and sweet nights.</div>
+    </section>
+
+    <section class="hug-generator">
+      <h2>Click for a Hug 💞</h2>
+      <p id="hug-message" class="hug-message">Tap the button for a new reminder.</p>
+      <button id="hug-button" class="cta" type="button">Send Me a Hug</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with all my love 💖</p>
+  </footer>
+
+  <audio id="bg-music" loop>
+    <source src="" type="audio/mpeg" />
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
