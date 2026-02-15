@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Us ✨</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="page story">
+  <div class="floating-layer">
+    <span class="float-heart">💗</span>
+    <span class="float-heart">💖</span>
+    <span class="float-star">✨</span>
+    <span class="float-star">⭐</span>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">For You</a>
+      <div class="nav-links">
+        <a href="story.html">Our Story ✨</a>
+        <a href="reasons.html">Reasons I Love You ❤️</a>
+        <a href="reminders.html">Daily Reminders 🫶</a>
+        <a href="letter.html">Birthday Letter 💌</a>
+        <a href="surprise.html">Surprise 🎁</a>
+      </div>
+      <button class="audio-toggle" type="button" aria-pressed="false">
+        🔈 Music
+      </button>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="page-title">
+      <h1>Us ✨</h1>
+      <p>A gentle timeline of the moments I hold the closest.</p>
+    </section>
+
+    <section class="timeline">
+      <article class="timeline-card">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>The day we met 🥹</h3>
+          <p>
+            You smiled and the whole room changed. I felt like the universe
+            whispered, “There you are.”
+          </p>
+          <div class="memory-reveal">
+            <button class="reveal-btn" type="button">Reveal Photos 📸</button>
+            <div class="carousel-container hidden">
+              <div class="carousel-track">
+                <img src="https://placehold.co/400x300/ffccd5/5a3d5c?text=Memory+1" alt="Memory 1"
+                  class="carousel-img active">
+                <img src="https://placehold.co/400x300/bde0fe/5a3d5c?text=Memory+2" alt="Memory 2" class="carousel-img">
+                <img src="https://placehold.co/400x300/cdb4db/5a3d5c?text=Memory+3" alt="Memory 3" class="carousel-img">
+              </div>
+              <button class="carousel-nav prev" type="button">❮</button>
+              <button class="carousel-nav next" type="button">❯</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="timeline-card">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>The moment I knew it was you 💘</h3>
+          <p>
+            Somewhere between our laughs and late-night talks, my heart settled in
+            and called you home.
+          </p>
+          <div class="memory-reveal">
+            <button class="reveal-btn" type="button">Reveal Photos 📸</button>
+            <div class="carousel-container hidden">
+              <div class="carousel-track">
+                <img src="https://placehold.co/400x300/ffccd5/5a3d5c?text=Cozy+1" alt="Cozy 1"
+                  class="carousel-img active">
+                <img src="https://placehold.co/400x300/bde0fe/5a3d5c?text=Cozy+2" alt="Cozy 2" class="carousel-img">
+                <img src="https://placehold.co/400x300/cdb4db/5a3d5c?text=Cozy+3" alt="Cozy 3" class="carousel-img">
+              </div>
+              <button class="carousel-nav prev" type="button">❮</button>
+              <button class="carousel-nav next" type="button">❯</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="timeline-card">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Every little memory I adore</h3>
+          <p>
+            Hand squeezes, shared desserts, tiny surprises — all the small things
+            that make us so special.
+          </p>
+          <div class="memory-reveal">
+            <button class="reveal-btn" type="button">Reveal Photos 📸</button>
+            <div class="carousel-container hidden">
+              <div class="carousel-track">
+                <img src="https://placehold.co/400x300/ffccd5/5a3d5c?text=Favorite+1" alt="Favorite 1"
+                  class="carousel-img active">
+                <img src="https://placehold.co/400x300/bde0fe/5a3d5c?text=Favorite+2" alt="Favorite 2"
+                  class="carousel-img">
+                <img src="https://placehold.co/400x300/cdb4db/5a3d5c?text=Favorite+3" alt="Favorite 3"
+                  class="carousel-img">
+              </div>
+              <button class="carousel-nav prev" type="button">❮</button>
+              <button class="carousel-nav next" type="button">❯</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with all my love 💖</p>
+  </footer>
+
+  <audio id="bg-music" loop>
+    <source src="" type="audio/mpeg" />
+  </audio>
+  <script src="script.js"></script>
+</body>
+
+</html>
