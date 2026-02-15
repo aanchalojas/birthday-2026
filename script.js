@@ -71,6 +71,7 @@ const pageTitle = document.querySelector(".page-title");
 if (pageTitle) {
   pageTitle.classList.add("fade-in");
 }
+<<<<<<< HEAD
 
 // Hug redeem button functionality
 const redeemButton = document.getElementById("redeem-hug");
@@ -166,3 +167,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log("Story script initialized");
 });
+=======
+>>>>>>> origin/main
