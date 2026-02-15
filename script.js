@@ -112,46 +112,57 @@ function createFloatingEmoji() {
 }
 
 // Story Carousel Logic
-const revealButtons = document.querySelectorAll(".reveal-btn");
+// Story Carousel Logic
+document.addEventListener("DOMContentLoaded", () => {
+  const revealButtons = document.querySelectorAll(".reveal-btn");
 
-revealButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const container = btn.nextElementSibling;
-    if (container && container.classList.contains("carousel-container")) {
-      container.classList.remove("hidden");
-      btn.style.display = "none"; // Hide button after reveal
-    }
-  });
-});
-
-// Carousel Navigation
-const carousels = document.querySelectorAll(".carousel-container");
-
-carousels.forEach((carousel) => {
-  const track = carousel.querySelector(".carousel-track");
-  const slides = Array.from(track.children);
-  const nextBtn = carousel.querySelector(".next");
-  const prevBtn = carousel.querySelector(".prev");
-  let currentIndex = 0;
-
-  const updateSlides = (index) => {
-    slides.forEach((slide, i) => {
-      slide.classList.remove("active");
-      if (i === index) {
-        slide.classList.add("active");
+  revealButtons.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const container = btn.parentNode.querySelector(".carousel-container");
+      if (container) {
+        container.classList.remove("hidden");
+        btn.style.display = "none"; // Hide button after reveal
+      } else {
+        console.error("Carousel container not found for button:", btn);
       }
     });
-  };
+  });
 
-  if (nextBtn && prevBtn) {
-    nextBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateSlides(currentIndex);
-    });
 
-    prevBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateSlides(currentIndex);
-    });
-  }
+  // Carousel Navigation
+  const carousels = document.querySelectorAll(".carousel-container");
+
+  carousels.forEach((carousel) => {
+    const track = carousel.querySelector(".carousel-track");
+    const slides = Array.from(track.children);
+    const nextBtn = carousel.querySelector(".next");
+    const prevBtn = carousel.querySelector(".prev");
+    let currentIndex = 0;
+
+    const updateSlides = (index) => {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) {
+          slide.classList.add("active");
+        }
+      });
+    };
+
+    if (nextBtn && prevBtn) {
+      nextBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlides(currentIndex);
+      });
+
+      prevBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlides(currentIndex);
+      });
+    }
+  });
+
+  console.log("Story script initialized");
 });
