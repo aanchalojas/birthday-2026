@@ -193,50 +193,36 @@ a {
 
 .hero-illustration {
   text-align: center;
-  display: grid;
-  gap: 1rem;
+  display: block;
 }
 
-.gift-box {
+.home-carousel {
   position: relative;
-  width: 180px;
-  height: 180px;
+  width: 100%;
+  max-width: 380px;
+  height: 380px;
   margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 4px solid var(--white);
+  background: var(--white);
 }
 
-.gift-lid,
-.gift-body {
+.home-carousel-img {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
   border-radius: 20px;
 }
 
-.gift-lid {
-  height: 40%;
-  background: var(--lavender);
-  top: 0;
-  animation: bounce 2.5s ease-in-out infinite;
-}
-
-.gift-body {
-  height: 70%;
-  background: var(--blush);
-  bottom: 0;
-}
-
-.gift-ribbon {
-  position: absolute;
-  width: 24px;
-  height: 100%;
-  background: var(--soft-gold);
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 12px;
-}
-
-.hint {
-  font-size: 0.95rem;
-  color: var(--text-light);
+.home-carousel-img.active {
+  opacity: 1;
 }
 
 .confetti {
@@ -596,72 +582,37 @@ a {
   transform: scale(1.05);
 }
 
-.carousel-container {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  height: 300px;
-  margin-top: 1rem;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background: #f0f0f0;
+.story-images-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 1.5rem;
 }
 
-.carousel-container.hidden {
+.story-images-container.hidden {
   display: none;
 }
 
-.carousel-track {
+.story-images-container img {
   width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.carousel-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid var(--white);
 }
 
-.carousel-img.active {
-  opacity: 1;
+.story-images-container img:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-.carousel-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.7);
-  border: none;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  z-index: 2;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-dark);
-  transition: background 0.3s;
-}
-
-.carousel-nav:hover {
-  background: rgba(255, 255, 255, 0.95);
-}
-
-.carousel-nav.prev {
-  left: 10px;
-}
-
-.carousel-nav.next {
-  right: 10px;
+@media (max-width: 600px) {
+  .story-images-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
 
 @keyframes floatUp {

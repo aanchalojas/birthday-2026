@@ -1,3 +1,16 @@
+// Homepage Slideshow Carousel Logic
+document.addEventListener("DOMContentLoaded", () => {
+  const homeImages = document.querySelectorAll(".home-carousel-img");
+  if (homeImages.length > 0) {
+    let currentHomeIndex = 0;
+    setInterval(() => {
+      homeImages[currentHomeIndex].classList.remove("active");
+      currentHomeIndex = (currentHomeIndex + 1) % homeImages.length;
+      homeImages[currentHomeIndex].classList.add("active");
+    }, 3000);
+  }
+});
+
 // Cute randomized reminders for the hug generator.
 const hugMessages = [
   "You are my favorite person to love.",
@@ -9,17 +22,21 @@ const hugMessages = [
   "You are my sweetest dream come true.",
 ];
 
-// Random message button (Daily Reminders page).
+// Send a Hug button functionality (Daily Reminders page).
 const hugButton = document.getElementById("hug-button");
-const hugMessage = document.getElementById("hug-message");
 
-if (hugButton && hugMessage) {
+if (hugButton) {
   hugButton.addEventListener("click", () => {
-    const randomIndex = Math.floor(Math.random() * hugMessages.length);
-    hugMessage.textContent = hugMessages[randomIndex];
-    hugMessage.classList.remove("pop");
-    void hugMessage.offsetWidth;
-    hugMessage.classList.add("pop");
+    // Trigger floating emoji animation for delightful micro-interaction
+    for (let i = 0; i < 15; i++) {
+      createFloatingEmoji();
+    }
+
+    const email = "aanchalagnihotri30@gmail.com";
+    const subject = encodeURIComponent("Virtual Hug 💞");
+    const body = encodeURIComponent("I was missing you so I am sending you a virtual hug! 🫂");
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+    window.open(gmailUrl, "_blank");
   });
 }
 
@@ -111,56 +128,21 @@ function createFloatingEmoji() {
   }, 5000);
 }
 
-// Story Carousel Logic
+// Story Reveal Photos Logic
 document.addEventListener("DOMContentLoaded", () => {
   const revealButtons = document.querySelectorAll(".reveal-btn");
 
   revealButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      const container = btn.parentNode.querySelector(".carousel-container");
+      const container = btn.parentNode.querySelector(".story-images-container");
       if (container) {
         container.classList.remove("hidden");
         btn.style.display = "none"; // Hide button after reveal
       } else {
-        console.error("Carousel container not found for button:", btn);
+        console.error("story-images-container not found for button:", btn);
       }
     });
-  });
-
-
-  // Carousel Navigation
-  const carousels = document.querySelectorAll(".carousel-container");
-
-  carousels.forEach((carousel) => {
-    const track = carousel.querySelector(".carousel-track");
-    const slides = Array.from(track.children);
-    const nextBtn = carousel.querySelector(".next");
-    const prevBtn = carousel.querySelector(".prev");
-    let currentIndex = 0;
-
-    const updateSlides = (index) => {
-      slides.forEach((slide, i) => {
-        slide.classList.remove("active");
-        if (i === index) {
-          slide.classList.add("active");
-        }
-      });
-    };
-
-    if (nextBtn && prevBtn) {
-      nextBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateSlides(currentIndex);
-      });
-
-      prevBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateSlides(currentIndex);
-      });
-    }
   });
 
   console.log("Story script initialized");
