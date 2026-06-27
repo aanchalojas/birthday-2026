@@ -385,11 +385,7 @@ a {
   opacity: 0.6;
 }
 
-<<<<<<< HEAD
-.love-letter>* {
-=======
 .love-letter > * {
->>>>>>> origin/main
   position: relative;
 }
 
@@ -489,17 +485,9 @@ a {
   0% {
     transform: translateY(0) translateX(0) rotate(0deg);
   }
-<<<<<<< HEAD
-
   50% {
     transform: translateY(-30px) translateX(10px) rotate(5deg);
   }
-
-=======
-  50% {
-    transform: translateY(-30px) translateX(10px) rotate(5deg);
-  }
->>>>>>> origin/main
   100% {
     transform: translateY(0) translateX(0) rotate(0deg);
   }
@@ -509,10 +497,6 @@ a {
   from {
     opacity: 0;
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
   to {
     opacity: 1;
   }
@@ -523,10 +507,6 @@ a {
     opacity: 0;
     transform: translateY(20px);
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
   to {
     opacity: 1;
     transform: translateY(0);
@@ -534,18 +514,10 @@ a {
 }
 
 @keyframes bounce {
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
   0%,
   100% {
     transform: translateY(0);
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
   50% {
     transform: translateY(-10px);
   }
@@ -555,17 +527,9 @@ a {
   0% {
     transform: scale(0.98);
   }
-<<<<<<< HEAD
-
   50% {
     transform: scale(1.02);
   }
-
-=======
-  50% {
-    transform: scale(1.02);
-  }
->>>>>>> origin/main
   100% {
     transform: scale(1);
   }
@@ -584,7 +548,6 @@ a {
     padding-top: 2rem;
   }
 }
-<<<<<<< HEAD
 
 /* Floating Hug Animation */
 .floating-hug {
@@ -712,5 +675,3 @@ a {
     opacity: 0;
   }
 }
-=======
->>>>>>> origin/main

@@ -71,7 +71,6 @@ const pageTitle = document.querySelector(".page-title");
 if (pageTitle) {
   pageTitle.classList.add("fade-in");
 }
-<<<<<<< HEAD
 
 // Hug redeem button functionality
 const redeemButton = document.getElementById("redeem-hug");
@@ -112,7 +111,6 @@ function createFloatingEmoji() {
   }, 5000);
 }
 
-// Story Carousel Logic
 // Story Carousel Logic
 document.addEventListener("DOMContentLoaded", () => {
   const revealButtons = document.querySelectorAll(".reveal-btn");
@@ -167,5 +165,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log("Story script initialized");
 });
-=======
->>>>>>> origin/main
