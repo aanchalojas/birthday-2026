@@ -1,3 +1,12 @@
+// Global function for story page "Reveal Photos" buttons (called via inline onclick)
+function revealPhotos(btn) {
+  var container = btn.nextElementSibling;
+  if (container && container.classList.contains("story-images-container")) {
+    container.classList.remove("hidden");
+    btn.style.display = "none";
+  }
+}
+
 // ========== Single DOMContentLoaded entry point ==========
 document.addEventListener("DOMContentLoaded", () => {
 
